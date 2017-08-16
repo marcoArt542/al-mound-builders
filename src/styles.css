@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+body{font-family: 'Open Sans', sans-serif;
+}
+
+nav{font-family: 'Open Sans', sans-serif;
+font-size: 120%}
+
+p {font-family: 'Open Sans', sans-serif;
+ font-size: 110%}
+
+#narrowTable{
+  width: 85%;
+  max-width: 85%;
+  margin-bottom: 20px;
+   
+}
+#narrowTable th, td {
+    padding: .45%;
+  
+}
+#narrowTable  td {
+    border-top: 1px solid #ddd !important;
+  	border-bottom: 1px solid #ddd !important;
+  }
+
+/* Everything but the jumbotron gets side spacing for mobile first views narrow-jumbotron.css */
+h1 {color: #48302b;
+  font-family: 'Tillana', cursive;
+  font-weight: Bold;
+  font-size: 250% }
+
+h2 {color:#542c24;
+ font-family: 'Tillana', cursive;
+  font-weight: Bold;
+  font-size: 200%}
+
+h3{color: #542c24;
+ font-family: 'Tillana', cursive;
+  font-weight: Bold;
+  font-size: 150%}
+  
+footer {
+  margin-top:1em;
+  background-color: #222222;
+  padding: 25px 0;
+  color: rgba(255, 255, 255, .8);
+  text-align: center;
+
+}
+footer p {
+  font-size: 90%;
+  margin: 0;
+ 
+}
+
+/* Footer links - default color for this level nav is light blue changes to silver*/
+ @media (min-width: 769px) {
+ 
+a.third:link {
+    color:inherit; 
+}
+
+/* visited link */
+a.third:visited {
+ color:inherit;
+}
+
+/* mouse over link */
+a.third:hover {
+    color: inherit;
+	text-decoration:none;
+}
+
+/* selected link */
+a.third:active {
+    color:inherit;
+}
+
+} 
+
+
+@media (max-width: 768px) {
+ 
+a.third:link {
+    color: silver;
+}
+
+/* visited link */
+a.third:visited {
+    color: silver;
+}
+
+/* mouse over link */
+a.third:hover {
+    color: silver;
+	text-decoration:none;
+}
+
+/* selected link */
+a.third:active {
+    color: silver;
+}
+
+}
+/* content border styles*/
+#woodstyle{
+  border: 1px solid #542c24;
+  border-radius: 10px; 
+  background-image: url(http://www.art-worlds.com/Alabama_moundbuilders/img/texturebkg.jpg);}
+
+#innerbox{
+  border: 1px #523c25 solid;
+  border-radius: 20px;
+  margin: 2em; padding: 3%;
+  background-color:#f2ecde; }
+
+

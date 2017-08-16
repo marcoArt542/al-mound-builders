@@ -1,0 +1,28 @@
+             
+
+ <div class="container" id="woodstyle">
+ <div id="innerbox">
+
+
+       <h1>Sites listed by Counties in Alabama</h1>
+       <p>Select county listing to view the site</p>
+<ul class="list-group">
+  <li *ngFor="let site of sites"
+    [class.selected]="site === selectedSite"
+    (click)="onSelect(site)" class="list-group-item">
+    <span class="badge">{{site.id}}</span>  {{site.county}}     
+  </li>
+</ul>
+<div *ngIf="selectedSite">
+  <h2>
+   {{selectedSite.name}} is in {{selectedSite.county}} county.
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+</div><!--close innerbox -->
+</div><!--close container -->
+
+ 
+    
+   
+            

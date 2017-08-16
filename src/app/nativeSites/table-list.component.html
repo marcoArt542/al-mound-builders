@@ -1,0 +1,43 @@
+ <div class="container" id="woodstyle">
+ <div id="innerbox">
+
+<h1>List of Native American Sites  </h1>
+<p>Select the site to see details.</p>
+ 
+ 
+<div class="table-responsive" align="center">
+    <table  id='narrowTable'>                  
+            <thead>
+                <tr>
+		           <th>
+                   
+                    </th>
+                    <th>Site</th>                 
+                    <th>Type</th>                                
+                    <th>Site Access</th>
+            </tr>
+            </thead>
+             <tbody>
+                <tr *ngFor="let site of sites" [routerLink]="['/detail', site.id]" >
+                    <td valign="top" > <img  [src]='site.imageThumbUrl'                  
+                    [style.width.px]='imageWidth'
+                    [style.margin.px]='imageMargin'
+                    [style.padding.px]='imagePadding' class="img-thumbnail" ></td>
+                    <td>{{ site.name }}</td>                   
+                    <td>{{ site.shortDescription }}
+                    </td>                   
+                    <td>
+                     <visit-star [rating]='site.rating'></visit-star>                  
+                    </td>
+
+          </tr>
+    
+         
+            </tbody>
+      </table>
+  <hr/>
+
+
+</div>
+</div><!--close innerbox-->
+</div><!--close container-->

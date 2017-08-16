@@ -1,0 +1,10 @@
+/* adpated from https://angular.io/tutorial/toh-pt2*/
+
+
+.text { text-align:left; font-size: 110%;  }
+.selected {
+      background-color: #c78f17 !important;
+      color: white;
+    }
+
+  

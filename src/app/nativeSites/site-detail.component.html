@@ -1,0 +1,85 @@
+ <div class="container" id="woodstyle">
+ <div id="innerbox">
+
+<div *ngIf="site" >
+
+  <h1>About  {{site.name}}</h1>
+     <div class="row" align="center">
+   <div class="col-sm-12">
+     <div style="margin:auto 0" >
+          <img  [src]='site.imageUrl'
+          [title]='site.name| uppercase'
+          [style.width.%]='imageWidth'
+          [style.margin.px]='imageMargin'
+          [style.padding.px]='imagePadding' > 
+          
+     </div>      
+  </div> <!--close  row-->
+  </div>
+    <div class="row">
+     <div class="col-sm-2" style="background-color:#c78f17;color:#ffffff; border-bottom:.5px inset #968052; ">   
+          <label>Location:</label>        
+     </div><!--close lable col-->
+      <div class="col-sm-10" >
+          <strong> {{ site.siteLocation}}, {{site.county}}  County, Alabama  </strong>       
+      </div><!--close lable col-->
+    </div><!--close row-->
+    
+
+    <div class="row">
+     <div class="col-sm-2" style="background-color:#e3d479;border-bottom:.5px inset #968052;">                
+          <label>Period: </label> 
+     </div><!--close lable col-->
+      <div class="col-sm-10" >         
+         <strong>  {{site.sitePeriod }}</strong>
+      </div><!--close ifocol-->
+  </div><!--close row-->
+  
+
+  <div class="row">
+        <div class="col-sm-2" style="background-color:#c78f17;color:#ffffff;border-bottom:.5px inset #968052;">
+        <label>Description: </label>
+        </div><!--close lable col-->
+
+        <div class="col-sm-7 " >
+        <p>  {{site.longDescription }}</p>
+        </div> <!--close info col-->
+ </div><!--row-->
+
+ 
+ <div class="row">  
+    <div class="col-sm-2" style="background-color:#c78f17;color:#ffffff; border-bottom:.5px inset #968052;">
+      <label>Acess Rating: </label>
+    </div><!--close lable col-->
+    <div class="col-sm-10" >
+         <visit-star [rating]='site.rating'></visit-star>
+    </div> <!--close info col--> 
+  </div><!--row-->
+
+ <div class="row">  
+    <div class="col-sm-2" style="background-color:#e3d479; border-bottom:.5px inset #968052;">
+      <label>Vistor Information: </label>
+    </div><!--close lable col-->
+    <div class="col-sm-7 "  >
+        <p> {{site.visitInfo}} </p>
+    </div> <!--close info col--> 
+  </div><!--row-->
+
+  <div class="row">
+    <div class="col-sm-2" >
+      
+    </div><!--close lable col--> 
+    <div class="col-sm-10" >Site location
+    <a href="{{site.googleMap}}" target="_blank" >Google Maps</a>
+   
+    </div> <!--close info col--> 
+ </div> <!--close row--> 
+  <br/>
+  <small>Archeological Reproduction Drawings by Carol Hicks</small><br/>
+  <br/>
+  <button (click)="goBack()">Back</button>
+
+</div> <!--end ngif-->
+</div><!--close innerbox-->
+</div><!--close container-->
+ 

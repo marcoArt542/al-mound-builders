@@ -1,0 +1,23 @@
+
+              
+       <p>Sample from Angular 2 io </p>
+
+       <h3> Sites list by counties in Alabama</h3>
+<ul class="heroes">
+  <li *ngFor="let site of sites"
+    [class.selected]="site === selectedSite"
+    (click)="onSelect(site)">
+    <span class="badge">{{site.id}}</span> {{site.county}}
+  </li>
+</ul>
+<div *ngIf="selectedSite">
+  <h3>
+   {{selectedSite.name}} is in {{selectedSite.county}} county
+  </h3>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+
+ 
+    
+   
+            

@@ -1,0 +1,39 @@
+<div class="container" id="woodstyle">
+ <div id="innerbox">
+
+ <h1>{{ pageTitle }}</h1>
+
+ <p>This site is based on years of research by Gregory L. Little. 
+    Visit the Alternate Perceptions website to read articles by Greg Little and learn more about his work: <a href="http://apmagazine.info" target="_blank"> http://apmagazine.info</a>.</p>
+    <p><strong>Dr. Greg Little:</strong> Greg is author or coauthor of nearly 50 books and over a thousand articles. He is part Seneca and is author of <em>The Archetype Experience</em>,<em> People of the Web</em>, and <em>Grand Illusions</em> as well as several other books on ancient history. He has also published numerous articles on America's mound builder culture and specific mound sites. He has been featured in documentaries on The History Channel, Discovery, The Learning Channel, National Geographic Channel, MSNBC, and SciFi.</p>
+<br/><br/>
+<div id='table-responsive'>
+    <table id='narrowTable' >                 
+       <tbody>
+                <tr *ngFor="let book of books" >
+                    <td ><img [src]='book.imgBkUrl'
+                    [title]=' book.bookTitle'              
+                    [style.width.px]='imageWidth'                    
+                    [style.padding.px]='imagePadding'  > 
+                              
+                 </td>
+                    
+
+                    <td><h2>{{ book.bookTitle}} <small><strong>{{book.bookSubTitle}}</strong></small></h2>
+                    Author(s): {{ book.bookAuthor}}<br/>
+                    Price: {{ book.price |currency:'USD':true}} 
+                    <p>{{ book.description }}</p>
+                    Publisher:  {{ book.publisher }}<br/>
+                    <a href="{{book.linkAmazon}}" target="_blank" >View on Amazon</a>
+               
+                 </td>                   
+                
+          </tr>
+    
+         
+      </tbody>
+    </table>
+  </div>
+  
+ </div><!--close innerbox-->
+</div><!--close container-->
